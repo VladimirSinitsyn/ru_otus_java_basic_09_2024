@@ -16,7 +16,7 @@ public class Horse implements Transport {
         }
         if (strength >= distance) {
             strength -= distance;
-            System.out.println("Человек перемещается на " + distance + " по равнине на лошади");
+            System.out.println("Человек перемещается на " + distance + "километров на лошади по "+ place.getType());
             return true;
         }
         return false;

@@ -18,7 +18,7 @@ public class Bicycle implements Transport {
         }
         if (strength >= distance) {
             strength -= distance;
-            System.out.println("Человек перемещается на " + distance + "километров по равнине на велосипеде");
+            System.out.println("Человек перемещается на " + distance + "километров на велосипеде по " + place.getType());
             return true;
         }
         return false;

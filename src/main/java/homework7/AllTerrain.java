@@ -11,7 +11,7 @@ public class AllTerrain implements Transport {
     public boolean move(int distance, TypeOfPlace place) {
         if (fuel >= distance) {
             fuel -= distance;
-            System.out.println("Внедорожник перемещается на " + distance + " километров по " + place);
+            System.out.println("Внедорожник перемещается на " + distance + " километров по " + place.getType());
             return true;
         }
         System.out.println("Недостаточно топлива");

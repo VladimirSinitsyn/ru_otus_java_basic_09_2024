@@ -16,7 +16,7 @@ public class Human {
 
     public boolean move(int distance, TypeOfPlace  typeOfPlace) {
         if(currentTransport==null) {
-            System.out.println(name+" идет пешком " + distance + " метров по " + typeOfPlace );
+            System.out.println(name+" идет пешком " + distance + " метров по " + typeOfPlace.getType() );
             return true;
         } else {
             return currentTransport.move(distance, typeOfPlace);
