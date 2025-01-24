@@ -11,6 +11,15 @@ public class Person {
         this.id = id;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", position=" + position +
+                '}';
+    }
+
     public String getName() {
         return name;
     }

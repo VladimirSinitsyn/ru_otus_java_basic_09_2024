@@ -1,23 +1,19 @@
 package homework11_algoritms;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PersonDataBase {
-    private final List<Person> persons = new ArrayList<>();
+    private final Map<Long, Person> idPersonMap = new HashMap<>();
 
     public Person findById(Long id) {
-        for (Person person : persons) {
-            if (person.getId().equals(id)) {
-                System.out.println("Найден сотрудник с ID " + person.getId() + "\n" + person.getName());
-                return person;
+
+                System.out.println("Найден сотрудник с ID " + idPersonMap.get(id) + "\n" + idPersonMap.get(id).getName());
+                return idPersonMap.get(id);
             }
-        }
-        return null;
-    }
 
     public void add(Person person) {
-        persons.add(person);
+        idPersonMap.put(person.getId(),person);
 
     }
 
