@@ -2,10 +2,11 @@ package homework14.threads;
 
 public class MultyThreadRealization {
     public static void main(String[] args) throws InterruptedException {
+        double[] array = new double[1000000000];
+        Thread[] threads = new Thread[4];
         long startTime = System.currentTimeMillis();
         System.out.println("Начало программы" + startTime);
-        Thread[] threads = new Thread[4];
-        double[] array = new double[1000000000];
+
         for (int t = 0; t < threads.length; t++) {
             int threadId = t;
             threads[threadId] = new Thread(() -> {
