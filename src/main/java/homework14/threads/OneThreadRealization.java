@@ -18,11 +18,13 @@ public class OneThreadRealization {
     public static void main(String[] args) {
         double[] array = new double[1000000000];
         long startTime = System.currentTimeMillis();
+        System.out.println("Начало программы" + startTime);
         for (int i = 0; i < 1000000000; i++) {
             array[i] = 1.14 * Math.cos(i) * Math.sin(i * 0.2) * Math.cos(i / 1.2);
             System.out.println(array[i]);
         }
         long endTime = System.currentTimeMillis();
+        System.out.println("Время окончания выполнения программы " + endTime);
         System.out.println("Время выполнения в один поток: " + (endTime - startTime));
     }
 }
