@@ -39,7 +39,6 @@ public class ClientHandler {
                                 sendMessage("Ошибка: Неверный формат команды. Используйте /w <ник> <сообщение>");
                                 continue;
                             }
-                        }
                         String recipientName = strings[1];
                         String privateMessage = strings[2];
                         ClientHandler recipient = server.searchUserByName(recipientName);
@@ -49,7 +48,7 @@ public class ClientHandler {
 
                         } else {
                             sendMessage("Пользователь " + recipientName + " не найден.");
-
+                        }
                         }
                     } else {
                         server.broadcast(userName + " : " + message);
